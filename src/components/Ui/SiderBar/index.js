@@ -3,6 +3,22 @@ import CSSModules from 'react-css-modules'
 import styles from './style.scss'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
+import { Link } from 'react-router'
+
+const url = [{
+  url: '/',
+  text: '首页'
+}, {
+  url: '/list',
+  text: '展示图片'
+}, {
+  url: '/test',
+  text: '功能测试'
+}, {
+  url: 'about',
+  text: '关于'
+}]
+
 class SiderBar extends React.Component {
   render () {
     const {common, onCloseSiderBar} = this.props
@@ -14,8 +30,13 @@ class SiderBar extends React.Component {
           open={common.siderbar.open}
           onRequestChange={(open) => onCloseSiderBar()}
         >
-          <MenuItem onTouchTap={onCloseSiderBar}>Menu Item</MenuItem>
-          <MenuItem onTouchTap={onCloseSiderBar}>Menu Item 2</MenuItem>
+          {
+            url.map((item, index) =>
+              <Link key={item.url} to={item.url}><MenuItem
+                onTouchTap={onCloseSiderBar}
+                >{item.text}</MenuItem></Link>
+            )
+          }
         </Drawer>
       </div>
     )

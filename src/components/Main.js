@@ -1,23 +1,23 @@
+require('../styles/reset.css')
 require('../styles/normalize.css')
-// require('styles/App.css')
+require('../styles/App.css')
 
 import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from '../containers/Ui/VisibleAppBar'
-import List from '../containers/Ui/VisibleList'
 import Alert from '../containers/Ui/VisibleAlert'
 import SiderBar from '../containers/Ui/VisibleSiderBar'
-import { OpenSiderBar } from '../actions/common'
-OpenSiderBar()
+
 class AppComponent extends React.Component {
   render () {
+    const { children } = this.props
     return (
       <MuiThemeProvider>
-        <div className="index">
+        <div className="App">
           <AppBar />
           <Alert />
           <SiderBar />
-          <List />
+          {children}
         </div>
       </MuiThemeProvider>
     )

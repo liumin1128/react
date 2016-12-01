@@ -4,47 +4,47 @@ import styles from './style.scss'
 import {GridList, GridTile} from 'material-ui/GridList'
 import IconButton from 'material-ui/IconButton'
 import StarBorder from 'material-ui/svg-icons/toggle/star-border'
-import image from '../../../images/1.jpg'
+const imageUrl = 'http://7xiy7w.com1.z0.glb.clouddn.com/'
 const tilesData = [
   {
-    img: image,
+    img: imageUrl + Math.floor(Math.random() * 5) + '.jpg',
     title: 'Breakfast',
     author: 'jill111',
     featured: true
   },
   {
-    img: image,
+    img: imageUrl + Math.floor(Math.random() * 5) + '.jpg',
     title: 'Tasty burger',
     author: 'pashminu'
   },
   {
-    img: image,
+    img: imageUrl + Math.floor(Math.random() * 5) + '.jpg',
     title: 'Camera',
     author: 'Danson67'
   },
   {
-    img: image,
+    img: imageUrl + Math.floor(Math.random() * 5) + '.jpg',
     title: 'Morning',
     author: 'fancycrave1',
     featured: true
   },
   {
-    img: image,
+    img: imageUrl + Math.floor(Math.random() * 5) + '.jpg',
     title: 'Hats',
     author: 'Hans'
   },
   {
-    img: image,
+    img: imageUrl + Math.floor(Math.random() * 5) + '.jpg',
     title: 'Honey',
     author: 'fancycravel'
   },
   {
-    img: image,
+    img: imageUrl + Math.floor(Math.random() * 5) + '.jpg',
     title: 'Vegetables',
     author: 'jill111'
   },
   {
-    img: image,
+    img: imageUrl + Math.floor(Math.random() * 5) + '.jpg',
     title: 'Water plant',
     author: 'BkrmadtyaKarki'
   }
